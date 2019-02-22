@@ -242,7 +242,7 @@ PRIVATE_STORAGE_AUTH_FUNCTION = \
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'#'/' + os.environ.get('KPI_MEDIA_URL', 'media').strip('/') + '/'
+MEDIA_URL = '/' + os.environ.get('KPI_MEDIA_URL', 'media').strip('/') + '/'
 
 
 # Following the uWSGI mountpoint convention, this should have a leading slash
