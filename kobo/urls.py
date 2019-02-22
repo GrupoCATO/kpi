@@ -13,4 +13,4 @@ urlpatterns = [
     url(r'^', include('kpi.urls')),
     url(r'^service_health/$', 'kobo.apps.service_health.views.service_health'),
     url(r'kobocat/', RedirectView.as_view(url=settings.KOBOCAT_URL, permanent=True)),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
