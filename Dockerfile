@@ -10,7 +10,8 @@ ENV KPI_LOGS_DIR=/srv/logs \
     DJANGO_SETTINGS_MODULE=kobo.settings \
     # The mountpoint of a volume shared with the `nginx` container. Static files will
     #   be copied there.
-    NGINX_STATIC_DIR=/srv/static
+    NGINX_STATIC_DIR=/srv/static \
+    NGINX_MEDIA_DIR=/srv/media
 
 
 ##########################################
