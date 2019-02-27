@@ -666,7 +666,7 @@ MONGO_DATABASE = {
     'PASSWORD': os.environ.get('KPI_MONGO_PASS', '')
 }
 
-if MONGO_DATABASE.getLANGUAGES('USER') and MONGO_DATABASE.get('PASSWORD'):
+if MONGO_DATABASE.get('USER') and MONGO_DATABASE.get('PASSWORD'):
     MONGO_CONNECTION_URL = (
         "mongodb://%(USER)s:%(PASSWORD)s@%(HOST)s:%(PORT)s") % MONGO_DATABASE
 else:
