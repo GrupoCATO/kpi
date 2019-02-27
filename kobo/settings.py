@@ -214,9 +214,9 @@ LANGUAGES = [
             'DJANGO_LANGUAGE_CODES', 'en').split(' ')
 ]
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 LOCALE_PATHS= (os.path.join(BASE_DIR, 'locale'),)
 
@@ -302,6 +302,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.i18n',
+                'django.core.context_processors.request',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
@@ -665,7 +666,7 @@ MONGO_DATABASE = {
     'PASSWORD': os.environ.get('KPI_MONGO_PASS', '')
 }
 
-if MONGO_DATABASE.get('USER') and MONGO_DATABASE.get('PASSWORD'):
+if MONGO_DATABASE.getLANGUAGES('USER') and MONGO_DATABASE.get('PASSWORD'):
     MONGO_CONNECTION_URL = (
         "mongodb://%(USER)s:%(PASSWORD)s@%(HOST)s:%(PORT)s") % MONGO_DATABASE
 else:

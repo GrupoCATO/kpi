@@ -102,7 +102,8 @@ RUN python manage.py collectstatic --noinput
 
 RUN git submodule init && \
     git submodule update --remote && \
-    python manage.py compilemessages
+    python django-admin makemessages --locale es && \
+    python django-admin compilemessages
 
 
 #################################################################
