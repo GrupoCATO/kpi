@@ -211,7 +211,7 @@ django.conf.locale.LANG_INFO.update(EXTRA_LANG_INFO)
 LANGUAGES = [
     (lang_code, get_language_info(lang_code)['name_local'])
         for lang_code in os.environ.get(
-            'DJANGO_LANGUAGE_CODES', 'en').split(' ')
+            'DJANGO_LANGUAGE_CODES', 'es').split(' ')
 ]#+ ['es', 'Spanish'],
 
 LANGUAGE_CODE = 'es-co'
