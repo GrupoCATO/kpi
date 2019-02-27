@@ -102,8 +102,18 @@ RUN python manage.py collectstatic --noinput
 
 RUN git submodule init && \
     git submodule update --remote && \
-    python django-admin makemessages --locale es && \
     python django-admin compilemessages
+
+
+
+RUN python manage.py makemessages -l es -e py,html,email,txt
+#RUN for app in {main,viewer} ; do cd onadata/apps/${app} && python manage.py makemessages -d djangojs -l es && cd - ; done
+
+RUN python manage.py makemessages -a
+#RUN for app in {main,viewer} ; do cd onadata/apps/${app} && python manage.py makemessages -d djangojs -a && cd - ; done
+
+RUN python manage.py compilemessages ;
+#RUN for app in {main,viewer} ; do cd onadata/apps/${app} && python manage.py compilemessages && cd - ; done
 
 
 #################################################################
