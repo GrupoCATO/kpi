@@ -212,7 +212,7 @@ LANGUAGES = [
     (lang_code, get_language_info(lang_code)['name_local'])
         for lang_code in os.environ.get(
             'DJANGO_LANGUAGE_CODES', 'en').split(' ')
-]+ ['es', 'Spanish'],
+]#+ ['es', 'Spanish'],
 
 LANGUAGE_CODE = 'es-co'
 
